@@ -1,0 +1,7 @@
+sudo: required
+services:
+  - docker
+script:
+  - docker build -t bookmarks .
+  - docker run -d --rm -p 8080:80 -p 8000:8000 --name bookmarks bookmarks
+  - docker stop bookmarks
