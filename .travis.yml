@@ -1,0 +1,12 @@
+sudo: required
+services:
+  - docker
+jobs:
+  include:
+    - stage: build
+      script: docker build -t bookmarks .
+    - stage: run
+      script:
+        docker run -d --rm -p 8080:80 -p 8000:8000 --name bookmarks bookmarks
+    - stage: stop
+      script: docker stop bookmarks
