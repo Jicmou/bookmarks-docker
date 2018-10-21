@@ -4,12 +4,19 @@ FROM fedora:28
 RUN dnf update -y
 RUN dnf install -y \
   git \
+  mariadb \
+  mariadb-server \
   nginx \
   nodejs \
   php \
   php-json \
+  php-pdo \
+  php-pdo_mysql \
   php-posix \
   php-xml
+
+# Setup mariadb
+RUN mysql_install_db --user=mysql
 
 # Import sources
 
@@ -45,6 +52,9 @@ RUN php composer.phar install
 WORKDIR /bookmarks-gui
 RUN npm install
 RUN npm run build
+
+ENV MYSQL_ROOT_PASSWORD klaxoon
+ENV DATABASE_URL mysql://root:${MYSQL_ROOT_PASSWORD}@127.0.0.1:3306/bookmarks
 
 # Expose GUI and API ports
 EXPOSE 80
