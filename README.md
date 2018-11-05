@@ -62,11 +62,13 @@ The container exposes three ports:
 * REST API Port: 8000
 * API Documentation: 8081
 
+As the GUI doesn't have a proper way to configure tha api url, we must bind the REST API port with your local port 8000.
+
 ```bash
 docker run -d --rm \
   --name <YOUR_CONTAINER_NAME> \
   -p <YOUR_GUI_PORT>:80 \
-  -p <YOUR_API_PORT>:8000 \
+  -p 8000:8000 \
   -p <YOUR_API_DOCUMENTATION_PORT>:8081 \
   <YOUR_IMAGE_NAME>
 ```
@@ -89,7 +91,7 @@ e.g: `http://localhost:8080`
 ## API Endpoint
 
 You can freely use the REST API with a tool like [postman](https://www.getpostman.com/) with the following endpoint:
-`http://<YOUR_IP_ADRESS>:<YOUR_API_PORT>`
+`http://<YOUR_IP_ADRESS>:8000`
 
 e.g: `http://localhost:8000`
 
