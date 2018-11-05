@@ -36,11 +36,11 @@ It is the only environment dependency you need to run the app.
 
 Please refer to the [docker website](https://docs.docker.com/install/)
 
-as the installation steps highly depends on your environment.
+as the installation steps highly depend on your environment.
 
 ### Build steps
 
-Enter the directory and build the docker image:
+Enter the directory and `build` the docker image. Make sure the `Dockerfile` is present in the directory:
 
 ```bash
 cd <YOUR_DIRECTORY>
@@ -54,7 +54,7 @@ docker build -t bookmarks .
 
 ## Run the container
 
-Run the conatiner with the run command. Make sure to bind the docker exposed ports to *free* local ports of your choice.
+Run the container with the `run` command. Make sure to bind the docker exposed ports to *free* local ports of your choice.
 
 The container exposes three ports:
 
@@ -86,16 +86,16 @@ You can enter the gui with your favourite browser by typing the following url: `
 
 e.g: `http://localhost:8080`
 
-## API Documentation
-
-The API documentation is accessible with the following url: `http://<YOUR_IP_ADRESS>:<YOUR_API_DOCUMENTATION_PORT>`
-
-e.g: `http://localhost:8081`
-
 ## API Endpoint
 
 You can freely use the REST API with a tool like [postman](https://www.getpostman.com/) with the following endpoint:
 `http://<YOUR_IP_ADRESS>:<YOUR_API_PORT>`
 
 e.g: `http://localhost:8000`
+
+## API Documentation
+
+The API documentation is accessible with the following url: `http://<YOUR_IP_ADRESS>:<YOUR_API_DOCUMENTATION_PORT>`
+
+e.g: `http://localhost:8081`
 
