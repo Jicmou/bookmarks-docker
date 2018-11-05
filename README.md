@@ -4,6 +4,18 @@
 
 note: this installation file is also visible [here](https://github.com/Jicmou/bookmarks-docker)
 
+### From ZIP File
+
+Extract ZIP file in the directory of your choice
+
+```bash
+unzip bookmark-docker.zip -d <YOUR_DIRECTORY>
+```
+e.g:
+```bash
+unzip bookmark-docker.zip -d bookmarks
+```
+
 ### From Github
 
 ```bash
@@ -28,6 +40,8 @@ as the installation steps highly depends on your environment.
 
 ### Build steps
 
+Enter the directory and build the docker image:
+
 ```bash
 cd <YOUR_DIRECTORY>
 docker build -t <YOUR_IMAGE_NAME> .
@@ -40,6 +54,13 @@ docker build -t bookmarks .
 
 ## Run the container
 
+Run the conatiner with the run command. Make sure to bind the docker exposed ports to *free* local ports of your choice.
+
+The container exposes three ports:
+
+* GUI Port: 80
+* REST API Port: 8000
+* API Documentation: 8081
 
 ```bash
 docker run -d --rm \
@@ -69,11 +90,11 @@ e.g: `http://localhost:8080`
 
 The API documentation is accessible with the following url: `http://<YOUR_IP_ADRESS>:<YOUR_API_DOCUMENTATION_PORT>`
 
-e.g: `http://localhost:8080`
+e.g: `http://localhost:8081`
 
 ## API Endpoint
 
-You can freely use the REST API wth a tool like [postman](https://www.getpostman.com/) with the following endpoint:
+You can freely use the REST API with a tool like [postman](https://www.getpostman.com/) with the following endpoint:
 `http://<YOUR_IP_ADRESS>:<YOUR_API_PORT>`
 
 e.g: `http://localhost:8000`
