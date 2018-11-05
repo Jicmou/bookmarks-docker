@@ -9,11 +9,11 @@ note: this installation file is also visible [here](https://github.com/Jicmou/bo
 Extract ZIP file in the directory of your choice
 
 ```bash
-unzip bookmark-docker.zip -d <YOUR_DIRECTORY>
+unzip bookmarks-docker.zip -d <YOUR_DIRECTORY>
 ```
 e.g:
 ```bash
-unzip bookmark-docker.zip -d bookmarks
+unzip bookmarks-docker.zip -d bookmarks
 ```
 
 ### From Github
