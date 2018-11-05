@@ -101,3 +101,11 @@ The API documentation is accessible with the following url: `http://<YOUR_IP_ADR
 
 e.g: `http://localhost:8081`
 
+## Additional informations
+
+You can see the code source of the whole project on [github](https://github.com/Jicmou?tab=repositories)
+
+* The GUI built with [react](https://reactjs.org/): [https://github.com/Jicmou/bookmarks-gui](https://github.com/Jicmou/bookmarks-gui)
+* The Backend Server built with [Symfony](https://symfony.com/): [https://github.com/Jicmou/bookmarks-ws](https://github.com/Jicmou/bookmarks-ws)
+* The API Documentation built with [Swagger](https://swagger.io/specification/): [https://github.com/Jicmou/bookmarks-openapi](https://github.com/Jicmou/bookmarks-openapi)
+* The [Docker](https://www.docker.com/) image: [https://github.com/Jicmou/bookmarks-docker](https://github.com/Jicmou/bookmarks-docker)
